@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flagged Emails Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flagged Emails Dashboard</h1>
+
+        {% if flagged_emails|length == 0 %}
+            <p>No flagged emails at the moment.</p>
+        {% else %}
+            <table border="1" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th>Email Content</th>
+                        <th>Phishing Traits Identified</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for email in flagged_emails %}
+                        <tr>
+                            <td>
+                                <pre>{{ email.email_text }}</pre>
+                            </td>
+                            <td>
+                                <ul>
+                                    {% for trait in email.traits %}
+                                        <li>{{ trait }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+
+        <br>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

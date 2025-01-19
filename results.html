@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Phishing Email Detection Results</h1>
+
+        <!-- Display results for multiple files -->
+        {% for result in results %}
+            <div class="result">
+                <h2>File: {{ result.filename }}</h2>
+                <h3>Email Metadata</h3>
+                <ul>
+                    <li><strong>From:</strong> {{ result.email_data["From"] }}</li>
+                    <li><strong>To:</strong> {{ result.email_data["To"] }}</li>
+                    <li><strong>Subject:</strong> {{ result.email_data["Subject"] }}</li>
+                    <li><strong>Date:</strong> {{ result.email_data["Date"] }}</li>
+                </ul>
+
+                <h3>Content</h3>
+                <pre>{{ result.email_data["Content"] }}</pre>
+
+                <h3>Detection Summary</h3>
+                <p><strong>Machine Learning Analysis:</strong> {{ result.ml_result }}</p>
+
+                {% if result.phishing_traits|length > 0 %}
+                    <h3>Phishing Traits Detected:</h3>
+                    <ul>
+                        {% for trait in result.phishing_traits %}
+                            <li>{{ trait }}</li>
+                        {% endfor %}
+                    </ul>
+                    <h3 style="color:red;">Alert: This email appears to be a phishing attempt!</h3>
+                {% else %}
+                    <h3 style="color:green;">No suspicious traits detected. Email may be legitimate.</h3>
+                {% endif %}
+            </div>
+            <hr>
+        {% endfor %}
+
+        <br>
+        <a href="/">Back to Home</a> | <a href="/dashboard">View Flagged Emails</a>
+    </div>
+</body>
+</html>

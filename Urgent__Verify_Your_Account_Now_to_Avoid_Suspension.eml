@@ -1,0 +1,120 @@
+Delivered-To: sanilmhatre117@gmail.com
+Received: by 2002:a05:6402:414d:b0:5d9:f85f:6cfe with SMTP id x13csp88753eda;
+        Thu, 16 Jan 2025 05:06:54 -0800 (PST)
+X-Received: by 2002:a5d:64cc:0:b0:382:4b9a:f51f with SMTP id ffacd0b85a97d-38a87356d3bmr33275985f8f.47.1737032812534;
+        Thu, 16 Jan 2025 05:06:52 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1737032812; cv=none;
+        d=google.com; s=arc-20240605;
+        b=cXY2XKK2Bg3Mygc1UGwzIiphinaNoNBRnAAP7aW2gniOIiAKVxMO48NljZLILw6MDD
+         eRiR2Zha95Bx6NjqEg1Voee//C9wMI27xUY3pH8GOGLX94ESutNgeliUG2N13GqFK0IA
+         1I1Nj81DYSS6wnomiNpp17AOgfRRI4ySMPzKixCuu0x4HGRRXKIcCvyua+gr9kmF/joC
+         WlWPnAszPG1P0WzDuE5snMDDGs0wqCpfmX/g8h5aMFOHU1AvX74L3fmDE3ZbABuASHim
+         /ZPhmkCg3j6MDt+0MVy+ed0t7rN4xZ8Njzf+BuxJc+4Ul9H2MEmQvL2RzFIYDhTXyJUg
+         12sg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=ZXXHZEX11Xrse4Nl05vZQUolIUp7G6xUymxOw9a0yi4=;
+        fh=Ribo+NDopNwpKQZoj3f6gUgoE/sT9iOd6J8h+sE86Co=;
+        b=be30k5ZdXgAsGNSb5HHjvugf2XRSkcySQ1d0apkLP0zwRe/T50h5kh98F2t07xqILF
+         1+b+aNJ44nBUZWnYI1aaC+qW8ZC3NAlOs0DVDs4w1hxFGYrmc1B6QL8K/V2C94QAWkwa
+         W0y55RVnlFdnySuqgmsq4nI0cluE0JIyQY7FFp+3aUjOlAexZtnDzQAUxpxPBEGW3Nf+
+         uT2elfnS11OXcflKlS/ZaoneuEDFs9LsgVwFd6Yo1zCYT4YcxPwJbFsCvN+OiXiGPAwM
+         L5m/ibmL/pXMYN5ClVWDb8+CnmZBQwhQPF5yx/QrVJ2XSXfIZKmEe1uPuYSULc+qMDTW
+         wIdw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WPuDOFMv;
+       spf=pass (google.com: domain of sanilnfp84@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sanilnfp84@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <sanilnfp84@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ffacd0b85a97d-38a8e4af49dsor7477729f8f.7.2025.01.16.05.06.52
+        for <sanilmhatre117@gmail.com>
+        (Google Transport Security);
+        Thu, 16 Jan 2025 05:06:52 -0800 (PST)
+Received-SPF: pass (google.com: domain of sanilnfp84@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WPuDOFMv;
+       spf=pass (google.com: domain of sanilnfp84@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sanilnfp84@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1737032812; x=1737637612; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=ZXXHZEX11Xrse4Nl05vZQUolIUp7G6xUymxOw9a0yi4=;
+        b=WPuDOFMvIPmnhJ0YjWPjQrRuMvg02/rzuo/IcGGoXM4epvIShtKwF8cZi+PDRruVy0
+         /GlWoJ6P/5fEWNE57md5jmFlV71eBxCQWGv+x+tUbm6hM73Jg2biTAzq/p4jZ4+YfL0m
+         pap4HHssNEkrYuD59SqLcZ2Zjk9ZjHyssbRCYvP9+YbYCxh3atnnyDhpKvtWFaiO3XJh
+         I1w/+kZ5XhPVT8b7aC6vhfTwjSo2flFrkuZWW5aZMVT7FzlvIUzJga5SQFQZMvgA5nEN
+         BnDd0C4b6tYB3Vob6B6gvMObVgjg4M7XquZSb+aqX9vQA/oooC9MSTBlcjQsWMRfkI0q
+         kwiA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1737032812; x=1737637612;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=ZXXHZEX11Xrse4Nl05vZQUolIUp7G6xUymxOw9a0yi4=;
+        b=Mq5mabrDgHSa/uwps+RlpTxZgOPt4gKHtWPsRO2gQ1Q+cidpkx2onx4l/9W+q0SZan
+         DfHsCzhrQeyJpHvMJBv9oJ/VQL47oj1+GPHLrw7Gn3AXwtqpRqaoP/EKzu1OYju63EDj
+         Z9YTTXoySb2Meru1oEf+vM+q6uj65WiPH7r6lH4PiPTlsrXhSHwZcA1HNMBO5vIeSWdH
+         Dr6nSNovdbp6OWHrt6dQMs1qpdWOkta5gsoF2nmdW9hMdyqztLY44UqD5u2IhUvL49VX
+         QnKezF7yTB3++3tZuRKbb37FUz+EYz8H0X4vXhr3I+puHlSQDRHUU5NZrJ/SYUj7ZGrv
+         S+Pg==
+X-Gm-Message-State: AOJu0YzYVHj9NnfCcseO6jwsq6Trr/Ub80w7EGAYFZm+KG5D2bXkUxdR
+	Gvg0rJiEzL6hhJoqIP+Ar0gQI24f4A8n9aK/YLQoJIfKVZHmY90zxc2yUBoZ0ZDa8wZ3TyTxuZy
+	djIyVgbjx7WdG/qcZGIQ79IKTG7MJQZzs
+X-Gm-Gg: ASbGncvAvVjgviXt/TvpuRI+nQC6zpYGmR0B31etS03hUFKrP9x6oAkDBdhdvShw8OY
+	fXP11+YCokuDnNQ/7Obs3/eeyCXtgTFnfxY/ZicWT
+X-Google-Smtp-Source: AGHT+IEx6fitfuc7vp4Quqy68fctoL+mEIA1J1MVONAJx1+oau2gaDj2cnSsX9Z4uXAtf4D2rhfxJe7KGHecU3eC44A=
+X-Received: by 2002:a05:6000:1ace:b0:38a:4184:152a with SMTP id
+ ffacd0b85a97d-38a87314dabmr31538794f8f.28.1737032811725; Thu, 16 Jan 2025
+ 05:06:51 -0800 (PST)
+MIME-Version: 1.0
+From: Sanil <sanilnfp84@gmail.com>
+Date: Thu, 16 Jan 2025 18:36:37 +0530
+X-Gm-Features: AbW1kvZc8aOICmYllbB-DZwXujNcdOEqTdY-9x5bwdnQiwh0YeIrN7UhEJp4zjI
+Message-ID: <CAEKVQ3cFM-GQgu=uVAu5euNBGcZFGymsN+3=ueGDOqT9JyCUhA@mail.gmail.com>
+Subject: Urgent: Verify Your Account Now to Avoid Suspension!
+To: "sanilmhatre117@gmail.com" <sanilmhatre117@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000b4cd00062bd27762"
+
+--000000000000b4cd00062bd27762
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Sanil
+
+We noticed suspicious activity on your account and need you to verify your
+information immediately to ensure your account remains secure.
+
+Please click the link below to confirm your identity and update your
+account details:
+
+=F0=9F=94=97 Verify My Account Now <http://fake-secure-login.com>
+
+If you do not take action within 24 hours, your account will be permanently
+suspended.
+
+Thank you for your cooperation,
+Support Team
+[FakeCompany Inc.]
+
+*Disclaimer:* Failure to verify your account may result in loss of access
+to all services.
+
+--000000000000b4cd00062bd27762
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p><br></p><p>Dear Sanil</p><p>We noticed suspicious activ=
+ity on your account and need you to verify your information immediately to =
+ensure your account remains secure.</p><p>Please click the link below to co=
+nfirm your identity and update your account details:</p><p><a rel=3D"noopen=
+er" href=3D"http://fake-secure-login.com">=F0=9F=94=97 Verify My Account No=
+w</a></p><p>If you do not take action within 24 hours, your account will be=
+ permanently suspended.</p><p>Thank you for your cooperation,<br>Support Te=
+am<br>[FakeCompany Inc.]</p><p><strong>Disclaimer:</strong> Failure to veri=
+fy your account may result in loss of access to all services.</p></div>
+
+--000000000000b4cd00062bd27762--

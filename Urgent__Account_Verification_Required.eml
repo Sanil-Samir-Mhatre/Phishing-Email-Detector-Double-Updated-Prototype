@@ -1,0 +1,113 @@
+Delivered-To: sanilmhatre117@gmail.com
+Received: by 2002:a05:6402:414d:b0:5d9:f85f:6cfe with SMTP id x13csp1219390eda;
+        Wed, 15 Jan 2025 07:40:18 -0800 (PST)
+X-Received: by 2002:a05:600c:6b6f:b0:436:e86e:e4ab with SMTP id 5b1f17b1804b1-436e86ee529mr281269615e9.30.1736955618264;
+        Wed, 15 Jan 2025 07:40:18 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1736955618; cv=none;
+        d=google.com; s=arc-20240605;
+        b=jRn7JP4fGVevFw0sbxRBeaLzXjzOBAvpbj7ru3VN25XhxP4YRrlvq9gpsbrxYcPAxT
+         /Lg/PzvPAuYIllasVrUi8KlT1qiQ+xLrLxC9y0oXRb9uzr3u+OTJI90xMAaMPOu5xpTr
+         lFKKU+ND96H17qT50VSj9ASbiLhJRxbsF/07wqiw/h44mi1qgwg4dw33h1LtjiuOeEcQ
+         9v/q9MMNBljDPTLntrDhHTSKfZoVljCxa0seV9kh0QLJsNwMJMsBZ5+y8tP/ADgMwwZB
+         Piadly1fRbg8k4fdBqBr8tiQAhvtQyVLPzzWCH67rfYKnSJJFJmacaxCgDVyqCfYxRnZ
+         mhqw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=Cc8EGVty7yQKEqriw8ZODMfZUQrCMu2skybIkfIKiCw=;
+        fh=Ribo+NDopNwpKQZoj3f6gUgoE/sT9iOd6J8h+sE86Co=;
+        b=iExn3TBzHRnqlG/G33+trT+tzYufK/qqDuQGtqasOmBK2mmBFomRWNki7Sum8RSuQ1
+         LmUKyuZvsRFnuCefgJDp/GljF1V9s4eYsefCsb0vllqh8gzyPIkmvWEo2U7+ntXnKKDs
+         z+/AzvGs2QteJhmz+e6gcufYYnyEqSReLFREBk4+Gmn21OnjjYlxb4+8NHy1DIHcaGEk
+         I0M6qAJMk/oEOvcH26GZvPzUgHMZiHcUnmwjIE4D2a8/HRkGSfgWakF+L/kVvRp0Wt2Y
+         Qgg8bTCcU8xTe40ti3pdtwpjy0UOC9XUxY3R5W45JtRldrdj87EtBNGdODQqOInJb3B+
+         XpQQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=CLrvJajQ;
+       spf=pass (google.com: domain of sanilnfp84@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sanilnfp84@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <sanilnfp84@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 5b1f17b1804b1-436e99b4dfbsor58023035e9.4.2025.01.15.07.40.18
+        for <sanilmhatre117@gmail.com>
+        (Google Transport Security);
+        Wed, 15 Jan 2025 07:40:18 -0800 (PST)
+Received-SPF: pass (google.com: domain of sanilnfp84@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=CLrvJajQ;
+       spf=pass (google.com: domain of sanilnfp84@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sanilnfp84@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1736955618; x=1737560418; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=Cc8EGVty7yQKEqriw8ZODMfZUQrCMu2skybIkfIKiCw=;
+        b=CLrvJajQ4Y+xqX4g+wJKiK7ZzBJFgp25HZvlwnKkCWSGo8vC7j5o13DbnHEDLejO82
+         KiuY0ol9nyAIRg3m5OVOU8boyx3muF0d2R/6rM4WrPVT0rfaiKYpZHvC2Owv1SqERuDT
+         HC6RqyeZk2y0zl7uZkzANyKLfudNGLJGTZU773H0sp9N86A0kfZzbaM4xVP2USDxwiDK
+         dtFiuNlcUNP4qcS4+PuLiWgkqCHNGc194WZpx9UWG4aUP/PNc3YQ1Mv4gW5RqooewwRc
+         89gWumuBklbarztNW81r+CQCF7UvTo3JB0qZBmNVJn+Gj+bP/feMgeRH4UWmlvH1LBZl
+         DdcQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1736955618; x=1737560418;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=Cc8EGVty7yQKEqriw8ZODMfZUQrCMu2skybIkfIKiCw=;
+        b=Rh46W8VjIeBhkB59B2Ii5hzl8iptYt4CYqc8cdloSUZU71KRSDYlbQ/cYEuv2lsamb
+         3QIQrx5loest9OZM/UeDotSk1gKz7VTzdiFWes5Y7ZorHGjfc2/CpNQKcCBtScaaa7VK
+         QpB8F8w3c0CGjFtvetfZq+YDNrRB1AhA7ix1+CKXkCYxVdCMQNc6oyB+nDJPc6ZQhfyb
+         XPUq7nYB8LMMEyNP94ruV4+aQTwywOIENH2mre9if9pdpLZKxVgDm7ZqKVgTrqQZXrMR
+         prblkzUgHLJgTZjE/6XfSpoB875ugxTSG2Bhi2/QXMsw/xrEtNfn68ogeT+rOqkYR5Z9
+         SSFA==
+X-Gm-Message-State: AOJu0Yy5Vx1hMIyQmtAOl8Dv69EAYZLpX9+iGLR16kyly0lKhb8PUlTF
+	F3Ctwpu5vPtGzf1L8hoyv+YU9ejwzXr5Gj9ve16ZjQet9JeqMOvtO1JB/+bRHZfMrEGTHKB+JIG
+	UQs2bk92kkOkBeD1Rif3t8+/3N3wuElao
+X-Gm-Gg: ASbGncuRxyFG3sUPoqc/M61n4Y2eyS6OEz7pPgCxM1KL6Q3CVdOS9xBY5QFaStu4yxm
+	XzgJheE8vkV6mx3SZM6aDnFGrAS+pL94G839OmpJV
+X-Google-Smtp-Source: AGHT+IFFG2DdQ++m7u+usv/GtwmDkwehhBYGZDCaNdGhUcUCY12CuokNmY2haehyHImKQj+QOCH8mL/IvFN1/pDya6s=
+X-Received: by 2002:a05:600c:1c8b:b0:434:a852:ba77 with SMTP id
+ 5b1f17b1804b1-436e26a7e1emr303612595e9.15.1736955617431; Wed, 15 Jan 2025
+ 07:40:17 -0800 (PST)
+MIME-Version: 1.0
+From: Sanil <sanilnfp84@gmail.com>
+Date: Wed, 15 Jan 2025 21:10:03 +0530
+X-Gm-Features: AbW1kvZYzmZ2lH1WsLbCkkHLvxwrDnX2zKenT3RgEME5pGttgYMnE628M8QMnR8
+Message-ID: <CAEKVQ3ccyV7DXi6b+9Ex58cAtbS0kLjMg8=jPaLiFm11K3_J-A@mail.gmail.com>
+Subject: Urgent: Account Verification Required
+To: "sanilmhatre117@gmail.com" <sanilmhatre117@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000915c7d062bc07e4f"
+
+--000000000000915c7d062bc07e4f
+Content-Type: text/plain; charset="UTF-8"
+
+* Date: Wed, 15 Jan 2025 10:00:00 +0000 Content-Type: text/plain;
+charset="UTF-8"*
+
+* Dear User**,*
+*Your account has been suspended due to suspicious activity. Please verify
+your account immediately at https://fakebank-login.com
+<https://fakebank-login.com>. Thank you.  *
+
+--000000000000915c7d062bc07e4f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><b>=C2=A0<span class=3D"gmail-hljs-symbol">Date:</span> We=
+d, <span class=3D"gmail-hljs-number">15</span> Jan <span class=3D"gmail-hlj=
+s-number">2025</span> <span class=3D"gmail-hljs-number">10</span>:<span cla=
+ss=3D"gmail-hljs-number">00</span>:<span class=3D"gmail-hljs-number">00</sp=
+an> +<span class=3D"gmail-hljs-number">0000</span>
+Content-Type: <span class=3D"gmail-hljs-keyword">text</span>/plain; charset=
+=3D<span class=3D"gmail-hljs-string">&quot;UTF-8&quot;</span></b><div><b><b=
+r></b><div><b>
+
+Dear User</b><b>,</b></div><div><b>Your account has been suspended due <spa=
+n class=3D"gmail-hljs-keyword">to</span> suspicious activity. Please verify=
+ your account immediately at <a href=3D"https://fakebank-login.com">https:/=
+/fakebank-login.com</a>.
+
+Thank you.=C2=A0=C2=A0</b></div></div></div>
+
+--000000000000915c7d062bc07e4f--
