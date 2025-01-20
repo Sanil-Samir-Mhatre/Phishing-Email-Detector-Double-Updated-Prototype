@@ -1,5 +1,7 @@
 # Phishing-Email-Detector-Double-Updated-Prototype
 A Flask-based web application for detecting phishing emails using machine learning and rule-based techniques, featuring file uploads and a flagged email dashboardP
+(This one inputs the multiple emails as .eml files and then detects the Phishing traits in them.)
+
 
 # Phishing Email Detection Web Application
 
